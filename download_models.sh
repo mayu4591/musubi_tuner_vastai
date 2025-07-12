@@ -3,6 +3,8 @@ set -euo pipefail
 
 python -m pip install "huggingface_hub[cli]"
 
+cd musubi-tuner
+
 huggingface-cli download tencent/HunyuanVideo --local-dir ./ckpts
 cd ./ckpts
 huggingface-cli download xtuner/llava-llama-3-8b-v1_1-transformers --local-dir ./llava-llama-3-8b-v1_1-transformers
