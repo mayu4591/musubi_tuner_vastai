@@ -1,7 +1,7 @@
 # 前処理+学習
 export LORA_NAME=xray
 
-python src/musubi_tuner/cache_latents.py --dataset_config dataset/dataset.toml --vae ckpts/hunyuan-video-t2v-720p/vae/pytorch_model.pt --vae_chunk_size 32 --vae_tiling --image_encoder ckpts/image_encoder/model.safetensors
+python src/musubi_tuner/cache_latents.py --dataset_config dataset/dataset.toml --vae ckpts/hunyuan-video-t2v-720p/vae/pytorch_model.pt --vae_chunk_size 32 --vae_tiling
 
 python src/musubi_tuner/cache_text_encoder_outputs.py --dataset_config dataset/dataset.toml  --text_encoder1 ckpts/text_encoder --text_encoder2 ckpts/text_encoder_2 --batch_size 16
 
