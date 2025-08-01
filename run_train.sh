@@ -13,7 +13,6 @@ accelerate launch \
   --output_name ${LORA_NAME} \
   --dit ckpts/hunyuan-video-t2v-720p/transformers/mp_rank_00_model_states.pt \
   --vae ckpts/hunyuan-video-t2v-720p/vae/pytorch_model.pt \
-  --image_encoder ckpts/image_encoder/model.safetensors \
   --text_encoder1 ckpts/text_encoder \
   --text_encoder2 ckpts/text_encoder_2 \
   --flash_attn \
@@ -28,7 +27,7 @@ accelerate launch \
   --network_dim 32 \
   --timestep_sampling shift \
   --discrete_flow_shift 7.0 \
-  --max_train_epochs 16 \
+  --max_train_epochs 50 \
   --save_every_n_epochs 1 \
   --save_last_n_epochs_state 1 \
   --save_state \

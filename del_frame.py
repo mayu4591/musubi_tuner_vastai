@@ -75,7 +75,7 @@ def process_video(src_file, target):
 def main():
     parser = argparse.ArgumentParser(description='動画からフレームを抽出して新しい動画を作成')
     parser.add_argument('src', help='入力動画ファイル またはディレクトリ')
-    parser.add_argument('--target', type=int, default=109, help='出力フレーム数（36の倍数+1、デフォルト: 109）')
+    parser.add_argument('--target', type=int, default=37, help='出力フレーム数（36の倍数+1、デフォルト: 37）')
     parser.add_argument('--replace', action='store_true', help='元ファイルを上書きする（デフォルト: 新しいファイルを作成）')
 
     args = parser.parse_args()
